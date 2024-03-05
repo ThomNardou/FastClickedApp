@@ -1,0 +1,163 @@
+﻿html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-image: url(../Image/wallpaper.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    font-family: fantasy;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    width: 100vh;
+    height: 300px;
+    background-image: url(../Image/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#playButton {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    border-radius: 30px;
+    background: linear-gradient(164deg, rgba(235,36,129,1) 0%, rgba(41,115,180,1) 100%);
+}
+
+#playButton:hover {
+    width: 150px;
+    transition: .35s;
+}
+
+#playButton:not(:hover) {
+    width: 60px;
+    transition: .35s;
+}
+
+.description {
+    padding: 120px 0 120px 0;
+    width: 100%;
+    background-color: #975ebd;
+    mask: var(--mask);
+}
+
+.description div {
+    margin: 30px auto;
+    width: 75%;
+}
+
+.highScorepart {
+    padding: 60px 0;
+    background-image: url(../Image/highScore.jpg);
+    background-size:cover;
+    background-attachment:fixed;
+    text-align: center;
+}
+
+.highScorepart h1{
+    margin-bottom: 60px;
+}
+
+table {
+    color: black;
+    font-weight: normal;
+}
+
+table.highScoreTable {
+    border: 2px solid #2773B1;
+    background-color: #C3E0FF;
+    width: 75%;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+table.highScoreTable td, table.highScoreTable th {
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+}
+
+table.highScoreTable tbody td {
+    font-size: 16px;
+}
+
+table.highScoreTable tr:nth-child(even) {
+    background: #9CC4FF;
+}
+
+table.highScoreTable thead {
+    background: #2773B1;
+}
+
+table.highScoreTable thead th {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    border-left: 2px solid #2773B1;
+}
+
+table.highScoreTable thead th:first-child {
+    border-left: none;
+}
+
+#clickButton {
+    display: none;
+    position: relative;
+}
+
+.playPart {
+    padding: 60px 0;
+    background-color: black;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.information {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px
+}
+
+.gameArea {
+    width: 600px;
+    height: 600px;
+    padding: 100px;
+    background-color: white;
+}
+
+button {
+    user-select: none;
+}
+
+h1 {
+    font-size: 60px;
+}

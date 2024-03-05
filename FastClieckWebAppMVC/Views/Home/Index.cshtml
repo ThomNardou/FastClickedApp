@@ -1,0 +1,76 @@
+﻿@model List<Player>
+@{
+    ViewData["Title"] = "Home Page";
+    Console.WriteLine("Page Chargé avec succés");
+}
+
+
+<div class="description">
+    <div>
+        <h2>How to Play</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Bibendum arcu vitae elementum curabitur. Morbi tristique senectus et netus et malesuada fames ac. Faucibus in ornare quam viverra orci. Enim nunc faucibus a pellentesque.
+            Sit amet nisl purus in mollis nunc. Fames ac turpis egestas sed tempus urna.
+            Sit amet nulla facilisi morbi tempus iaculis urna id volutpat. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor.
+            Vitae tortor condimentum lacinia quis. Aliquam ut porttitor leo a diam sollicitudin tempor id. Libero volutpat sed cras ornare arcu dui vivamus.
+            Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Viverra justo nec ultrices dui.
+        </p>
+    </div>
+    <div class="creator">
+        <h2>About Me :</h2>
+        <p>
+            My name is Thomas Nardou, and I am currently an apprentice developer in Switzerland.
+            My passion for the world of computing is reflected in my constant commitment to explore the many facets of programming.
+            As a fervent advocate of digital creativity, I also thrive in the field of graphic design, transforming ideas into captivating visuals.
+            I am also an avid fan of the video game minecraft.
+        </p>
+
+    </div>
+</div>
+
+<div class="highScorepart">
+    <h1>HighScores</h1>
+    <table class="highScoreTable">
+        <thead>
+            <tr>
+                <th>Place</th>
+                <th>Nickname</th>
+                <th>Scores</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Player player in Model)
+            {
+                <tr>
+                    <td>@player.Place.</td>
+                    <td>@player.NickName</td>
+                    <td>@player.Score</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="playPart" id="playPart">
+    <h1>Play</h1>
+    <div class="playerGround">
+        <div class="information">
+            <label id="nickname">Nickname : User</label>
+            <label id="score">Score : 0</label>
+        </div>
+        <div class="gameArea">
+            <button onclick="startGame()" id="startButton">Start</button>
+            <button onclick="upgradeScore()" id="clickButton">CLICK ME !</button>
+        </div>
+    </div>
+</div>
+<script>
+    function test() {
+        $.ajax({
+            type: "POST",
+            url: "/Home/ClieckEvent",
+            async: true
+        });
+    }
+</script>

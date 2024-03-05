@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  fastclieckwebappmvc:
+    image: ${DOCKER_REGISTRY-}fastclieckwebappmvc
+    build:
+      context: .
+      dockerfile: FastClieckWebAppMVC/Dockerfile
