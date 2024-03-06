@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>c044516a-ef5b-4dc4-8428-d3427ca2ee53</ProjectGuid>
+    <ProjectGuid>45c0f808-a5fa-4cfe-95d4-314ee56588ce</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
     <DockerServiceName>fastclieckwebappmvc</DockerServiceName>

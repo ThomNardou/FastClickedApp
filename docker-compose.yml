@@ -1,8 +1,35 @@
 version: '3.4'
 
+networks:
+  db_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.0.0/24
+
 services:
   fastclieckwebappmvc:
     image: ${DOCKER_REGISTRY-}fastclieckwebappmvc
     build:
       context: .
       dockerfile: FastClieckWebAppMVC/Dockerfile
+    networks:
+      db_network:
+        ipv4_address: 192.168.0.3  
+  db:
+    image: mysql/mysql-server:5.7
+    container_name: mysql1
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: db_user_pass
+    restart: always
+    ports:
+      - "3306:3306" 
+    expose:
+      - 3306  
+    volumes:
+      - "./data.sql:/docker-entrypoint-initdb.d/db_clickGame.sql"
+    networks:
+      db_network:
+        ipv4_address: 192.168.0.10 
