@@ -13,4 +13,14 @@ Une fois sur la page il est necessaire d'executer cette commande :
 ```bash
 docker compose up
 ```
-Une fois que l'execution s'est terminée vous remaquerez qu'une conteneur s'est créer
+Une fois que l'execution s'est terminée vous remaquerez qu'une conteneur s'est créer.
+
+</br>
+L'application peut maintenant être lancée en ouvrant le projet depuis Visual Studio. Après avoir démarré l'application, un message d'erreur spécifique doit apparaître que voici : 
+<img src="./image/error.png">
+
+Pour pouvoir résoudre le problème il est necessaire d'executer cette commande toujours dans un environnement CMD
+
+```bash
+docker network connect --ip 192.168.0.2 docker-compose_db_network FastClieckWebAppMVC
+```
