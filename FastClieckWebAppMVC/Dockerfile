@@ -18,5 +18,6 @@ RUN dotnet publish "FastClieckWebAppMVC.csproj" -c Release -o /app/publish /p:Us
 
 FROM base AS final
 WORKDIR /app
+RUN echo "hello there"
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "FastClieckWebAppMVC.dll"]

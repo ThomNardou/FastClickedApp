@@ -46,10 +46,11 @@ namespace FastClieckWebAppMVC.Controllers
             connection.Close();
         }
 
+        [HttpPost]
         public void insertPlayerScore(string playerName, int playerScore)
         {
             // Valeurs de connection de la base de donnée
-            string srv_addr = "172.17.0.3";                          // Adresse du  serveur 
+            string srv_addr = "172.18.0.2";                          // Adresse du  serveur 
             string dbname = "db_clickGame";                          // nom de la base de donnée
             string uid = "root";                                     // Utilisateur
             string pass = "root";                                    // Mot de passe
@@ -80,7 +81,7 @@ namespace FastClieckWebAppMVC.Controllers
             int place = 1;
 
             // Valeurs de connection de la base de donnée
-            string srv_addr = "172.17.0.3";                          // Adresse du  serveur 
+            string srv_addr = "172.18.0.2";                          // Adresse du  serveur 
             string dbname = "db_clickGame";                          // nom de la base de donnée
             string uid = "root";                                     // Utilisateur
             string pass = "root";                                    // Mot de passe
