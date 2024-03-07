@@ -5,6 +5,7 @@ Une simple application asp.net core (MVC) qui dockerisé
 Afin de pouvoir correctement utiliser l'application voici les prérequis à avoir :
 - Avoir <a href="https://www.docker.com/products/docker-desktop/">docker desktop</a> sur le son ordinateur : 
 <img src="./image/docker.png">
+
 - Avoir <a href="https://visualstudio.microsoft.com/fr/downloads/">Visual Studio 2022</a> (ou plus) avec asp.net installé :
 <img src="./image/vs2022.png">
 
