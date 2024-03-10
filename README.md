@@ -19,7 +19,7 @@ Une fois l'installation terminé il est necessaire de se diriger dans le dossier
 
 Une fois sur la page il est necessaire d'executer cette commande : 
 ```bash
-docker compose up
+docker compose up -d
 ```
 Une fois que l'execution s'est terminée vous remaquerez qu'une conteneur s'est créer.
 
