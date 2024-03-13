@@ -1,0 +1,1 @@
+pause echo "Hello world !"
