@@ -88,11 +88,11 @@ namespace FastClieckWebAppMVC.Controllers
             string port = "3306";                                    // Port 
 
             // Chaine de connexion permettant de de se connecter à la base de donnée
-            string connectStr = "SERVER=" + srv_addr + ";" + "PORT=" + port + ";" + "DATABASE=" + dbname + ";" + "UID=" + uid + ";" + "PASSWORD=" + pass + ";";
+            string connectStr = "SERVER=" + srv_addr + ";" + "DATABASE=" + dbname + ";" + "UID=" + uid + ";" + "PASSWORD=" + pass + ";" + "PORT=" + port;
 
             // attribue la chaine de connexion 
             connection = new MySqlConnection(connectStr);
-            Debug.WriteLine(connection);
+            Console.WriteLine("==================================================================================\n" + connection.ConnectionString + "\n==================================================================================");
             connection.Open();
 
 
