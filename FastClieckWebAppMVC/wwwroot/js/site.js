@@ -15,11 +15,10 @@ let clickButton = document.getElementById("clickButton");
 let startButton = document.getElementById("startButton");
 let nicknameLabel = document.getElementById("nickname");
 let scoreLabel = document.getElementById("score");
+let timeLabel = document.getElementById("time");
 
 const move = () => {
     
-
-    if (frame % 200 == 0) {
         if (gameStarted) {
             if (Timer > 0) {
                 Timer -= 1;
@@ -42,6 +41,10 @@ const move = () => {
 
                 score = 0;
                 pseudo = "User"
+
+                startButton.style.display = "block";
+                clickButton.style.display = "none";
+                Timer = 30
             }
         }
         else {
@@ -49,16 +52,16 @@ const move = () => {
             clickButton.style.display = "none";
             Timer = 30
         }
-    }
+    
 
-
+    timeLabel.innerHTML = "Remaining Time : " + Timer;
     scoreLabel.innerHTML = "Score : " + score;
 
     frame += 1;
     console.log(Timer);
 }
 
-setInterval(move, 1);
+setInterval(move, 1000);
 
 function startGame() {
 
@@ -77,7 +80,7 @@ function startGame() {
 function upgradeScore() {
     if (gameStarted) {
         score += 1;
-
+        scoreLabel.innerHTML = "Score : " + score;
         var i = Math.floor(Math.random() * 420);
         var j = Math.floor(Math.random() * 420);
         clickButton.style.transition = "0.15s"
