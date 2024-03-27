@@ -31,6 +31,7 @@ Maintenant que l'installation est terminée l'application peut être lancée mai
 <img src="./image/dockercomposeOption.png" />
 
 Maintenant tout est prêt pour jouer pour lancer le programme il suffit sur le bouton "Docker Compose" : 
+
 <img src="./image/dockercomposeOption2.png" />
 
 <h1 style="margin-top: 100px; text-align: center">Bon jeu !!</h1>
