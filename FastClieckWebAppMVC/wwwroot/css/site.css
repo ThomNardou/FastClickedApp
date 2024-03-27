@@ -14,7 +14,8 @@ html {
 }
 
 body {
-    background-image: url(../Image/wallpaper.jpg);
+    /*background-image: url(../Image/wallpaper.jpg);*/
+    background-color:black;
     background-size: cover;
     background-attachment: fixed;
     color: white;
