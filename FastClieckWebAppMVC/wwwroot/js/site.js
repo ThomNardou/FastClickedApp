@@ -32,7 +32,7 @@ const move = () => {
 
                 $.ajax({
                     type: "POST",
-                    url: "/Home/insertPlayerScore",
+                    url: "/Home/InsertPlayerScore",
                     data: {
                         playerName: pseudo,
                         playerScore: score

@@ -20,7 +20,7 @@ namespace FastClieckWebAppMVC.Controllers
 
         public IActionResult Index()
         {
-            return View(selectPlayers());
+            return View(SelectPlayer());
         }
 
         [HttpPost]
@@ -47,7 +47,7 @@ namespace FastClieckWebAppMVC.Controllers
         }
 
         [HttpPost]
-        public void insertPlayerScore(string playerName, int playerScore)
+        public void InsertPlayerScore(string playerName, int playerScore)
         {
             // Valeurs de connection de la base de donnée
             string srv_addr = "192.168.0.10";                          // Adresse du  serveur 
@@ -74,7 +74,7 @@ namespace FastClieckWebAppMVC.Controllers
             connection.Close();
         }
 
-        public List<Player> selectPlayers()
+        public List<Player> SelectPlayer()
         {
             //getContainerIp();
 
