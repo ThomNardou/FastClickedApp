@@ -28,6 +28,7 @@ soit depuis <a href="https://github.com/ThomNardou/FastClickedApp">GitHub</a> en
 ## 3. Lancement
 
 Maintenant que l'installation est terminée l'application peut être lancée mais il reste un paramètre à verifier qui est le mode de lancement. Pour ce faire il est necessaire dans visual studio de verifier le mode de lancement quoi doit s'appeler "docker-compose" : 
+
 <img src="./image/dockercomposeOption.png" />
 
 Maintenant tout est prêt pour jouer pour lancer le programme il suffit sur le bouton "Docker Compose" : 
