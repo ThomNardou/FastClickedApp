@@ -27,13 +27,29 @@ soit depuis <a href="https://github.com/ThomNardou/FastClickedApp">GitHub</a> en
 
 ## 3. Lancement
 
-Maintenant que l'installation est terminée l'application peut être lancée mais il reste un paramètre à verifier qui est le mode de lancement. Pour ce faire il est necessaire dans visual studio de verifier le mode de lancement quoi doit s'appeler "docker-compose" : 
+Maintenant que l'installation est terminée l'application peut être lancée mais il reste un paramètre à verifier qui est le mode de lancement. Pour ce faire il est necessaire dans visual studio (en double cliquant sur le fichier "***FastClieckWebAppMVC.sln***")de verifier le mode de lancement quoi doit s'appeler "docker-compose" : 
 
 <img src="./image/dockercomposeOption.png" />
+
+</br>
+</br>
 
 Maintenant tout est prêt pour jouer pour lancer le programme il suffit sur le bouton "Docker Compose" : 
 
 <img src="./image/dockercomposeOption2.png" />
+
+</br>
+</br>
+</br>
+
+⚠ **Il est possible que lors du lancement du programme les messages suivants apparaissent :**
+
+<img src="./image/SSLCertificate.png">
+<img src="./image/SSLCertificate2.png">
+
+**Pour pouvoir lancer le prgramme il suffit d'appuyer sur "oui" sur les deux pages**
+
+
 
 <h1 style="margin-top: 100px; text-align: center">Bon jeu !!</h1>
 <img src="./image/homePage.png" />
