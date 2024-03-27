@@ -1,8 +1,6 @@
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.0.2' IDENTIFIED BY 'root';
 
-DROP DATABASE IF EXISTS db_clickGame;
-
-CREATE DATABASE db_clickGame;
+CREATE DATABASE IF NOT EXISTS db_clickGame;
 
 USE db_clickGame;
 

@@ -35,6 +35,7 @@ header {
     background-image: url(../Image/logo.png);
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 1;
 }
 
 #playButton {
@@ -48,6 +49,7 @@ header {
     font-size: 20px;
     border-radius: 30px;
     background: linear-gradient(164deg, rgba(235,36,129,1) 0%, rgba(41,115,180,1) 100%);
+    z-index: 1;
 }
 
 #playButton:hover {
@@ -160,4 +162,12 @@ button {
 
 h1 {
     font-size: 60px;
+}
+
+#particles-js {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 0;
 }

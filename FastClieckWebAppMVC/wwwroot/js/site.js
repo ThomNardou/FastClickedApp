@@ -63,6 +63,10 @@ const move = () => {
 
 setInterval(move, 1000);
 
+particlesJS.load('particles-js', 'assets/particles.json', function () {
+    console.log('callback - particles-js config loaded');
+});
+
 function startGame() {
 
     pseudo = prompt("What is you player name ? ", "User");

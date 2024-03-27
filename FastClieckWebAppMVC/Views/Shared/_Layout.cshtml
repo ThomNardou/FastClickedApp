@@ -10,6 +10,7 @@
 </head>
 <body>
     <header>
+        <div id="particles-js"></div>
         <audio src="/Image/backgroundSong.mp3" loop></audio>
         <div class="logo"></div>
         <a href="#playPart" id="playButton" onmouseover="changeContent(true)" onmouseout="changeContent(false)">▶</a>
@@ -24,6 +25,7 @@
             &copy; 2024 - FastClieckWebAppMVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>*@
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/lib/jquery/dist/jquery.js"></script>
     @await RenderSectionAsync("Scripts", required: false)

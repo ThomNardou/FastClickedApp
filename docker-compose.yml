@@ -32,10 +32,11 @@ services:
     expose:
       - 3306 
     volumes:
-      - "./data.sql:/docker-entrypoint-initdb.d/db_clickGame.sql"
+      - "./data.sql:/tmp/data.sql"
     networks:
       db_network:
         ipv4_address: 192.168.0.10
+    command: "--init-file /tmp/data.sql"
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 10s
