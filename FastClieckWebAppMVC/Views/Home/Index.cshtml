@@ -41,11 +41,16 @@
             </tr>
         </thead>
         <tbody>
+            @*pour chaque joueur récuperer *@
             @foreach (Player player in Model)
             {
+                @*Afficher ses infomrations *@
                 <tr>
+                    @*ça place *@
                     <td>@player.Place.</td>
+                    @*Son pseudo*@
                     <td>@player.NickName</td>
+                    @*son Score*@
                     <td>@player.Score</td>
                 </tr>
             }
