@@ -46,6 +46,11 @@ namespace FastClieckWebAppMVC.Controllers
             connection.Close();
         }
 
+        /// <summary>
+        /// Fonction qui va inseret le nouveau joueur dans la base donnée 
+        /// </summary>
+        /// <param name="playerName"></param>
+        /// <param name="playerScore"></param>
         [HttpPost]
         public void InsertPlayerScore(string playerName, int playerScore)
         {
@@ -61,19 +66,29 @@ namespace FastClieckWebAppMVC.Controllers
 
             // attribue la chaine de connexion 
             connection = new MySqlConnection(connectStr);
+
+            // Ouvre la connexion à la base de donnée
             connection.Open();
 
+            // Requête SQL pour insérer des valeurs dans la table `t_joueur`.
             string insertQuery = $"insert into t_joueur (name, score) values ('{playerName}', {playerScore});";
 
+            // Crée la commande avec la requête d'insertion.
             MySqlCommand insertCommand = new MySqlCommand(insertQuery, connection);
 
+            // Exécute la requête
             MySqlDataReader insertDataReader = insertCommand.ExecuteReader();
 
             insertDataReader.Read();
 
+            // Ferme la connexion à la base de données.
             connection.Close();
         }
 
+        /// <summary>
+        /// Fonction qui va chercher les premier joueur de la base donnée
+        /// </summary>
+        /// <returns>La liste des joueurs</returns>
         public List<Player> SelectPlayer()
         {
             //getContainerIp();
@@ -92,33 +107,44 @@ namespace FastClieckWebAppMVC.Controllers
 
             // attribue la chaine de connexion 
             connection = new MySqlConnection(connectStr);
-            Console.WriteLine("==================================================================================\n" + connection.ConnectionString + "\n==================================================================================");
+
+            // Ouvre la connexion à la base de données.
             connection.Open();
 
-
+            // Crée une liste pour stocker les joueurs.
             List<Player> playerList = new List<Player>();
 
+            // Requête SQL pour sélectionner les 10 meilleurs joueurs par score, en ordre décroissant.
             string selectQuery = "select * from t_joueur order by score desc limit 10;";
+
             MySqlCommand cmd = new MySqlCommand(selectQuery, connection);
 
+            // Exécute la requête 
             MySqlDataReader reader = cmd.ExecuteReader();
 
+            // Parcourt chaque ligne des résultats obtenu.
             while (reader.Read())
             {
+                // Crée un nouveau joueur 
                 Player player = new Player();
 
+                // Récupère les valeurs des colonnes et les assigne au joueur.
                 player.Id = Convert.ToInt32(reader["id"]);
                 player.Place = place;
                 player.NickName = reader["name"].ToString();
                 player.Score = Convert.ToInt32(reader["score"]);
 
+                // Ajoute le joueur à la liste des joueurs.
                 playerList.Add(player);
 
+                // Incrémente la place pour le prochain joueur.
                 place++;
             }
 
+            // Ferme la connexion à la base de données.
             connection.Close();
 
+            // Renvoie la liste des joueurs
             return playerList;
         }
 
