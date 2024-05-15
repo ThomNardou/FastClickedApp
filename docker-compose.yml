@@ -7,8 +7,7 @@ networks:
     driver: bridge 
     ipam: 
       config:
-        - subnet: 192.168.0.0/24 
-
+        - subnet: 192.168.0.0/24 #definis la plage d adresse ip
 services:
   fastclieckwebappmvc: 
     image: ${DOCKER_REGISTRY-}fastclieckwebappmvc # Image utilise 
@@ -21,6 +20,7 @@ services:
     depends_on: 
       db: # definis la dependance du projet au conteneur DB
         condition: service_healthy # le conteneur db doit etre allume pour se lancer 
+    container_name: FastClieckWebAppMVC
   db:
     image: mysql/mysql-server:5.7 # definis l image a utiliser pour le conteneur 
     container_name: mysql1 # Nom du conteneur 
